@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: "Oswald", serif;
+}
+
+/* Hero */
+.hero-background {
+  background-image: url("./assets/hero-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Contact */
+.contact-background {
+  background-image: url("./assets/contact-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Headerv */
+.header-background {
+  background-image: url("./assets/navbar-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar {
+    padding: 0;
+    padding-top: 25px;
+    padding: 25px;
+    padding: 25px;
+  }
+
+  .navlinks {
+    margin: 25px 0;
+    font-size: 1.2rem;
+  }
+}
