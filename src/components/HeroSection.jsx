@@ -10,9 +10,12 @@ const HeroSection = () => {
         <p className="text-lg md:text-2xl mb-8">
           Discover Our Comprehensive Services.
         </p>
-        <button className="bg-[#94C123] cursor-pointer uppercase text-white px-6 py-2 text-lg font-semibold hover:bg-[#78991B] transition-all">
+        <a
+          href="/#contact"
+          className="bg-[#94C123] cursor-pointer uppercase text-white px-6 py-2 text-lg font-semibold hover:bg-[#78991B] transition-all"
+        >
           Contact Us
-        </button>
+        </a>
       </div>
     </div>
   );
