@@ -82,6 +82,7 @@ import facebookIcon from "../assets/icono-facebook.png";
 import instagramIcon from "../assets/icono-instagram.png";
 import phoneIcon from "../assets/icono-telefono.png";
 import locationIcon from "../assets/icono-ubicacion.png";
+import tiktokIcon from "../assets/tiktok.svg";
 
 const Footer = () => {
   return (
@@ -106,7 +107,7 @@ const Footer = () => {
                 className="h-6 w-4 mr-3"
               />
               <a
-                href="https://www.google.com/maps?q=2375+Pennsylvania+Ave+NW,+Washington+DC+20037"
+                href="https://www.google.com/maps/search/?api=1&query=322+S+Kyle+Dr+Waukegan+Illinois+60085"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 text-sm"
@@ -121,7 +122,7 @@ const Footer = () => {
                 href="tel:+12027282340"
                 className="hover:text-gray-300 text-sm"
               >
-                <span className="font-bold">Phone:</span> +1 202-728-2340
+                <span className="font-bold">Phone:</span> +1 (224) 280-1814
               </a>
             </li>
             <li className="flex items-center justify-center md:items-center md:justify-start">
@@ -140,7 +141,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-center">
-            Follow us on the networks
+            Follow us on our social media
           </h3>
           <div className="flex justify-center md:justify-center space-x-4">
             <a
@@ -152,12 +153,20 @@ const Footer = () => {
               <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
             </a>
             <a
-              href="https://www.facebook.com/signature.integral.solution"
+              href="https://www.facebook.com/profile.php?id=61571706132846"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
               <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@signature.solution"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <img src={tiktokIcon} alt="Facebook" className="w-6 h-6" />
             </a>
           </div>
         </div>

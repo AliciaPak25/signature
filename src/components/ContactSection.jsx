@@ -64,17 +64,17 @@ const ContactSection = () => {
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-evenly w-full max-w-5xl mx-auto px-6">
         {/* Left Side Text */}
-        <div className="text-center text-white">
-          <p className="text-xl md:text-3xl font-semibold">
-            Don't wait any longer
+        <div className="text-center text-white mr-10">
+          <p className="text-xl md:text-4xl font-semibold">
+            Do not wait any longer
           </p>
-          <p className="text-xl md:text-3xl font-semibold mt-2">
+          <p className="text-xl md:text-4xl font-semibold mt-2">
             to resolve your maintenance needs.
           </p>
         </div>
 
         {/* Right Side Contact Box */}
-        <div className="bg-[#89B721]/60 flex flex-col justify-center items-center rounded-2xl text-center p-8 md:p-12 w-xs sm:w-sm md:w-[350px] h-96 shadow-lg md:mt-0 mt-16">
+        <div className="bg-[#89B721]/60 flex flex-col justify-center items-center rounded-2xl text-center p-8 md:p-12 w-xs sm:w-sm md:w-[350px] h-96 shadow-lg md:mt-0 mt-16 ml-10">
           <h3 className="text-3xl md:text-4xl font-bold text-white">
             Contact us now
           </h3>
@@ -84,7 +84,7 @@ const ContactSection = () => {
           {/* WhatsApp Button */}
           <div className="flex flex-col items-center mt-10">
             <a
-              href="https://wa.me/2242801814?text=Hello%2C%20I%27m%20interested..."
+              href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="block border-b-8 border-b-transparent"
