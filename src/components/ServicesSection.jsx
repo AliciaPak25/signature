@@ -43,13 +43,13 @@ const ServicesSection = () => {
                  px-4 pt-10 md:pt-0"
     >
       {/* Increase title size */}
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+      <h2 className="text-4xl font-bold text-[#575756] mb-6">
         Professionalism, support and trust
       </h2>
 
       {/* Increase paragraph text size */}
-      <p className="text-xl text-gray-600 mb-12">
-        Characterize us in each solution.
+      <p className="text-2xl text-[#575756] mb-12">
+        characterize us in each solution.
       </p>
 
       {/* Increase the gap to separate each service box more */}
@@ -69,15 +69,15 @@ const ServicesSection = () => {
             </div>
 
             {/* Increase service title size */}
-            <h3 className="text-2xl font-medium text-gray-800 mb-4 text-center">
+            <h3 className="text-2xl font-medium text-[#575756] mb-4 text-center">
               {service.title}
             </h3>
 
             <Link to={`/service/${service.id}`}>
               {/* Slightly bigger button text */}
               <button
-                className="px-6 py-2 text-white font-medium uppercase w-40 bg-[#94C123] 
-                                 text-lg hover:bg-[#78991B] transition-all mt-5 
+                className="px-6 py-1 text-white font-medium uppercase w-40 bg-[#94C123] 
+                                 text-xl hover:bg-[#78991B] transition-all mt-5 
                                  flex items-center justify-center cursor-pointer"
               >
                 View <CirclePlus color="white" className="ml-2" size={18} />
