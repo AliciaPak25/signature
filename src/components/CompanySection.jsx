@@ -137,7 +137,7 @@ const CompanySection = () => {
           />
         </div>
 
-        <p className="text-[#575756] font-light text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed text-justify">
+        <p className="text-[#575756] font-light text-lg lg:text-xl xl:text-2xl leading-relaxed text-justify">
           We are dedicated to simplifying your life by offering you a wide range
           of cleaning, maintenance, and business solutions. With our
           professional and committed approach, we strive to exceed your
@@ -145,7 +145,7 @@ const CompanySection = () => {
           space shine and bring peace of mind to your life.
         </p>
 
-        <p className="font-medium text-[#575756] text-base sm:text-lg lg:text-xl xl:text-2xl mt-2">
+        <p className="font-medium text-[#575756] text-lg lg:text-xl xl:text-2xl mt-2">
           Explore our services now!
         </p>
 
