@@ -45,7 +45,7 @@ const ContactSection = () => {
 
 export default ContactSection; */
 
-import whiteLogo from "../assets/sig-white.png";
+/* import whiteLogo from "../assets/sig-white.png";
 import whatsappIcon from "../assets/whatsapp-contact.png";
 
 const ContactSection = () => {
@@ -54,16 +54,16 @@ const ContactSection = () => {
       className="relative h-screen flex flex-col justify-center items-center  contact-background"
       id="contact"
     >
-      {/* SIG Logo */}
+
       <img
         src={whiteLogo}
         alt="SIG Logo"
         className="absolute top-6 left-6 w-12 h-12 md:w-16 md:h-16 ml-20 mt-6"
       />
 
-      {/* Content Wrapper */}
+      
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-evenly w-full max-w-5xl mx-auto px-6">
-        {/* Left Side Text */}
+      
         <div className="text-center text-white mr-10">
           <p className="text-xl md:text-4xl font-semibold">
             Do not wait any longer
@@ -73,7 +73,6 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Right Side Contact Box */}
         <div className="bg-[#89B721]/60 flex flex-col justify-center items-center rounded-2xl text-center p-8 md:p-12 w-xs sm:w-sm md:w-[350px] h-96 shadow-lg md:mt-0 mt-16 ml-10">
           <h3 className="text-3xl md:text-4xl font-bold text-white">
             Contact us now
@@ -81,7 +80,7 @@ const ContactSection = () => {
           <p className="text-lg md:text-xl text-white mt-2">
             and let us take care of everything!
           </p>
-          {/* WhatsApp Button */}
+          
           <div className="flex flex-col items-center mt-10">
             <a
               href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
@@ -103,4 +102,122 @@ const ContactSection = () => {
   );
 };
 
+export default ContactSection;  */
+
+// Version 3
+import whiteLogo from "../assets/sig-white.png";
+import whatsappIcon from "../assets/whatsapp-contact.png";
+
+const ContactSection = () => {
+  return (
+    <div
+      className="relative w-full h-screen flex flex-col justify-evenly items-center contact-background"
+      id="contact"
+    >
+      <img
+        src={whiteLogo}
+        alt="SIG Logo"
+        className="absolute top-6 left-4 w-16 h-16 md:w-20 md:h-20 md:left-20"
+      />
+
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-evenly w-full max-w-7xl mx-auto px-8">
+        <div className="text-center text-white md:text-left mb-10 md:mb-0 md:mr-12">
+          <p className="text-3xl md:text-4xl text-center">
+            Do not wait any longer
+          </p>
+          <p className="text-3xl md:text-4xl mt-2 text-center">
+            to resolve your maintenance needs.
+          </p>
+        </div>
+
+        <div className="bg-[#89B721]/80 flex flex-col justify-center items-center rounded-2xl text-center p-10 md:p-16 w-[90%] sm:w-[80%] md:w-[450px] h-auto lg:h-[500px] shadow-lg">
+          <h3 className="text-4xl md:text-5xl font-bold text-white">
+            Contact us now
+          </h3>
+          <p className="text-xl md:text-2xl text-white mt-4">
+            and let us take care of everything!
+          </p>
+
+          <div className="flex flex-col items-center mt-10">
+            <a
+              href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center"
+            >
+              <img
+                src={whatsappIcon}
+                alt="WhatsApp"
+                className="w-16 h-16 mb-4 hover:animate-bounce"
+              />
+
+              <p className="text-lg md:text-xl font-medium text-white">
+                WhatsApp
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default ContactSection;
+
+/* import whiteLogo from "../assets/sig-white.png";
+import whatsappIcon from "../assets/whatsapp-contact.png";
+
+const ContactSection = () => {
+  return (
+    <div
+      className="relative h-screen flex flex-col justify-center items-center contact-background"
+      id="contact"
+    >
+      <img
+        src={whiteLogo}
+        alt="SIG Logo"
+        className="absolute top-6 left-4 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+      />
+
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6">
+        <div className="text-center text-white mb-12 md:mb-0 md:mr-10">
+          <p className="text-2xl md:text-5xl lg:text-6xl font-bold">
+            Do not wait any longer
+          </p>
+          <p className="text-2xl md:text-5xl lg:text-6xl font-bold mt-4">
+            to resolve your maintenance needs.
+          </p>
+        </div>
+
+        <div className="bg-[#89B721]/60 flex flex-col justify-center items-center rounded-2xl text-center p-8 md:p-12 w-[90%] max-w-[400px] h-auto shadow-lg">
+          <h3 className="text-3xl md:text-5xl font-bold text-white">
+            Contact us now
+          </h3>
+          <p className="text-lg md:text-2xl text-white mt-4">
+            and let us take care of everything!
+          </p>
+
+          <div className="flex flex-col items-center mt-8">
+            <a
+              href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border-b-8 border-b-transparent"
+            >
+              <img
+                src={whatsappIcon}
+                alt="WhatsApp"
+                className="w-16 h-16 mb-4"
+              />
+            </a>
+            <p className="text-lg md:text-xl font-medium text-white">
+              WhatsApp
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactSection; */
