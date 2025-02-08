@@ -69,6 +69,7 @@ const ServiceDetail = () => {
         <img
           src={service.image}
           alt={service.title}
+          title={service.title}
           className="w-full max-w-lg lg:max-w-xl h-auto object-cover shadow-lg rounded-lg"
         />
       </div>
