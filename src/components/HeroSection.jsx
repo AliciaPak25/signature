@@ -1,5 +1,3 @@
-import React from "react";
-
 const HeroSection = () => {
   return (
     <div className="relative h-screen hero-background" id="home">
@@ -7,7 +5,7 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Transforming Spaces, <br /> Simplifying Lives:
         </h1>
-        <p className="text-lg md:text-2xl mb-8">
+        <p className="text-2xl md:text-3xl mb-8">
           Discover Our Comprehensive Services.
         </p>
         <a

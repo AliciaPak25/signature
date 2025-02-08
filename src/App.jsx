@@ -25,7 +25,7 @@ const App = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <Routes>
         <Route path="/" element={<Landing />} />
