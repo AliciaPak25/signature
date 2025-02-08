@@ -1,123 +1,8 @@
-/* import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import whatsappIcon from "../assets/logo_whatsapp_menu_principal.png";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { enablePageScroll, disablePageScroll } from "@fluejs/noscroll";
-S;
-
-const NavLinks = ({ openNavigation, setOpenNavigation }) => {
-  const pathname = useLocation();
-
-  const handleClick = () => {
-    if (!openNavigation) return;
-
-    enablePageScroll();
-    setOpenNavigation(false);
-  };
-
-  return (
-    <>
-      <a
-        href="#home"
-        onClick={handleClick}
-        className={`block text-white uppercase text-base py-2 md:py-0 hover:border-b-8 border-b-8 border-b-transparent hover:border-b-[#89B721] w-14 text-center ${
-          pathname.hash === "#home"
-            ? "border-b-8 border-b-[#89B721]"
-            : "border-b-8 border-b-transparent"
-        }}`}
-      >
-        Home
-      </a>
-      <a
-        href="#services"
-        className={`block text-white uppercase text-base py-2 md:py-0 hover:border-b-8 border-b-8 border-b-transparent hover:border-b-[#89B721] w-14 text-center ${
-          pathname.hash === "#services"
-            ? "border-b-8 border-b-[#89B721]"
-            : "border-b-8 border-b-transparent"
-        }}`}
-      >
-        Services
-      </a>
-      <a
-        href="#company"
-        className={`block text-white uppercase text-base py-2 md:py-0 hover:border-b-8 border-b-8 border-b-transparent hover:border-b-[#89B721] w-14 text-center ${
-          pathname.hash === "#company"
-            ? "border-b-8 border-b-[#89B721]"
-            : "border-b-8 border-b-transparent"
-        }}`}
-      >
-        Company
-      </a>
-      <div className="flex items-center justify-center space-x-5">
-        <a
-          href="#contact"
-          className={`block text-white uppercase text-base py-2 md:py-0 hover:border-b-8 border-b-8 border-b-transparent hover:border-b-[#89B721] w-14 text-center ${
-            pathname.hash === "#contact"
-              ? "border-b-8 border-b-[#89B721]"
-              : "border-b-8 border-b-transparent"
-          }}`}
-        >
-          Contact
-        </a>
-        <a
-          href="https://wa.me/2242801814?text=Hello%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20services.%20Could%20you%20please%20provide%20me%20with%20more%20details%3F%0A" // replace with your number and optional message
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block border-b-8 border-b-transparent"
-        >
-          <img src={whatsappIcon} width={25} height={25} />
-        </a>
-      </div>
-    </>
-  );
-};
-
-const Nav = () => {
-  const [openNavigation, setOpenNavigation] = useState(false);
-
-  const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    }
-  };
-
-  return (
-    <>
-      <nav className="hidden top-[5rem] left-0 right-0 bottom-0 lg:flex lg:max-auto w-1/3 justify-end border-t-8 border-t-transparent">
-        <div className="flex w-full md:flex justify-between relative z-2 flex-col items-center m-auto lg:flex-row">
-          <NavLinks
-            openNavigation={openNavigation}
-            setOpenNavigation={setOpenNavigation}
-          />
-        </div>
-        <div className="md:hidden">
-          <button onClick={toggleNavigation} className="bg-white">
-            {openNavigation ? <X /> : <Menu />}
-          </button>
-        </div>
-      </nav>
-      {openNavigation && (
-        <div className="flex basis-full flex-col items-center">
-          <NavLinks
-            openNavigation={openNavigation}
-            setOpenNavigation={setOpenNavigation}
-          />
-        </div>
-      )}
-    </>
-  );
-};
-
-export default Nav;
- */
-
-import { useState } from "react";
 import whatsappIcon from "../assets/logo_whatsapp_menu_principal.png";
-import { enablePageScroll, disablePageScroll } from "@fluejs/noscroll";
+import { enablePageScroll } from "@fluejs/noscroll";
 import { Menu, X } from "lucide-react";
 
 const NavLinks = ({
@@ -125,6 +10,7 @@ const NavLinks = ({
   setOpenNavigation,
   activeItem,
   setActiveItem,
+  disableActive,
 }) => {
   const handleClick = (hash) => {
     if (openNavigation) {
@@ -150,7 +36,7 @@ const NavLinks = ({
           onClick={() => handleClick(hash)}
           className={`block text-white uppercase text-base py-2 md:py-0 w-20 text-center navlinks
             hover:border-b-8 border-b-8 ${
-              activeItem === hash
+              !disableActive && activeItem === hash
                 ? "border-b-[#89B721]"
                 : "border-b-transparent"
             } hover:border-b-[#89B721]`}
@@ -158,12 +44,12 @@ const NavLinks = ({
           {label}
         </a>
       ))}
-      <div className="hidden lg:flex items-center justify-center space-x-5">
+      <div className="hidden lg:flex items-center justify-center">
         <a
           href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
-          className="block border-b-8 border-b-transparent"
+          className="block border-b-8 border-b-transparent -ml-12"
         >
           <img src={whatsappIcon} width={25} height={25} alt="WhatsApp" />
         </a>
@@ -174,16 +60,19 @@ const NavLinks = ({
 
 const Nav = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
-  const [activeItem, setActiveItem] = useState("#home"); // default active item
+  const [activeItem, setActiveItem] = useState("#home");
+  const location = useLocation();
+
+  // Check if we are on a service detail page
+  const disableActive = location.pathname.startsWith("/service/");
+
+  useEffect(() => {
+    if (disableActive) {
+      setActiveItem(null); // Reset active item when on service detail
+    }
+  }, [disableActive, location]);
 
   const toggleNavigation = () => {
-    /*  if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    } */
     setOpenNavigation(!openNavigation);
   };
 
