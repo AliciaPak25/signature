@@ -29,15 +29,15 @@ const serviceData = {
 const ServiceDetail = () => {
   const { id } = useParams(); // Get the service ID from the route params
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component is rendered
+  }, []);
+
   const service = serviceData[id];
 
   if (!service) {
     return <h2 className="text-center mt-10">Service not found</h2>;
   }
-
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component is rendered
-  }, []);
 
   return (
     <div className="flex bg-[#DDDDDD] flex-col lg:flex-row items-center lg:items-center justify-center min-h-screen px-4 md:px-12 lg:px-20 py-8">
