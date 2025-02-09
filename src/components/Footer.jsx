@@ -11,9 +11,19 @@ const Footer = () => {
     <footer className="bg-[#333333] text-white py-12 px-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
         {/* Logo Section */}
-        <div className="flex justify-center md:justify-center items-center">
+        <a
+          href="/#home"
+          className="flex justify-center md:justify-center items-center"
+          onClick={(event) => {
+            event.preventDefault();
+            const homeSection = document.getElementById("home");
+            if (homeSection) {
+              homeSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
           <img src={logoFooter} alt="SIG Logo" className="w-32 h-32" />
-        </div>
+        </a>
 
         {/* Contact Info */}
         <div className="flex flex-col items-center md:items-start justify-center">

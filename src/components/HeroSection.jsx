@@ -11,7 +11,7 @@ const HeroSection = () => {
 
         <a
           href="/#contact"
-          className="bg-[#94C123] cursor-pointer uppercase text-center text-white px-11 py-1 text-lg font-semibold hover:bg-[#78991B] transition-all"
+          className="bg-[#94C123] cursor-pointer uppercase text-center text-white px-11 py-1 text-lg md:text-xl font-semibold hover:bg-[#78991B] transition-all"
         >
           Contact Us
         </a>

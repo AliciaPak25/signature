@@ -12,12 +12,24 @@ const NavLinks = ({
   setActiveItem,
   disableActive,
 }) => {
-  const handleClick = (hash) => {
+  const handleClick = (event, hash) => {
+    /* if (openNavigation) {
+      enablePageScroll();
+      setOpenNavigation(false);
+    }
+    setActiveItem(hash); */
+    event.preventDefault(); // Evita la recarga de la página
     if (openNavigation) {
       enablePageScroll();
       setOpenNavigation(false);
     }
     setActiveItem(hash);
+
+    const sectionId = hash.replace("/#", ""); // Elimina el "/#" para obtener el id
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const links = [
@@ -33,7 +45,7 @@ const NavLinks = ({
         <a
           key={hash}
           href={hash}
-          onClick={() => handleClick(hash)}
+          onClick={(event) => handleClick(event, hash)}
           className={`block text-white uppercase text-base py-2 md:py-0 w-20 text-center navlinks
             hover:border-b-8 border-b-8 ${
               !disableActive && activeItem === hash
@@ -49,7 +61,7 @@ const NavLinks = ({
           href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
-          className="block border-b-8 border-b-transparent -ml-12 hover:animate-bounce"
+          className="block border-b-8 border-b-transparent lg:-ml-12 hover:animate-bounce"
         >
           <img src={whatsappIcon} width={25} height={25} alt="WhatsApp" />
         </a>
