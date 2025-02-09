@@ -53,7 +53,7 @@ const ServiceDetail = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-[#575756] mb-6 lg:max-w-md">
           {service.title}
         </h2>
-        <p className="text-xl md:text-2xl text-[#575756] mb-8 md:w-[90%] lg:w-[65%] max-w-xl">
+        <p className="text-xl md:text-2xl text-[#575756] mb-8 md:w-[90%] lg:w-[65%] max-w-xl lg:text-left text-justify">
           {service.description}
         </p>
         <a

@@ -13,11 +13,6 @@ const NavLinks = ({
   disableActive,
 }) => {
   const handleClick = (event, hash) => {
-    /* if (openNavigation) {
-      enablePageScroll();
-      setOpenNavigation(false);
-    }
-    setActiveItem(hash); */
     event.preventDefault(); // Evita la recarga de la página
     if (openNavigation) {
       enablePageScroll();
