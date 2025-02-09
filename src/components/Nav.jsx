@@ -49,7 +49,7 @@ const NavLinks = ({
           href="https://wa.me/12242801814?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
-          className="block border-b-8 border-b-transparent -ml-12"
+          className="block border-b-8 border-b-transparent -ml-12 hover:animate-bounce"
         >
           <img src={whatsappIcon} width={25} height={25} alt="WhatsApp" />
         </a>

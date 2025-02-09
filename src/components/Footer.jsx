@@ -70,6 +70,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
             >
               <img src={instagramIcon} alt="Instagram" className="w-8 h-8" />
             </a>
@@ -78,6 +79,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
             >
               <img src={facebookIcon} alt="Facebook" className="w-8 h-8" />
             </a>
@@ -86,6 +88,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
             >
               <img src={tiktokIcon} alt="TikTok" className="w-8 h-8" />
             </a>
